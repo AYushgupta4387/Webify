@@ -1,0 +1,144 @@
+.main-website-container {
+    width: 90vw;
+    background-color: #fff;
+}
+
+// About starts here
+.about {
+    padding: 4rem 0;
+
+    &__main-container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &__image {
+        max-height: 90vh;
+        width: auto;
+
+        &--recipe {
+            width: 15rem;
+            height: 15rem;
+        }
+    }
+
+    &__right-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 40vw;
+    }
+
+    &__description {
+        text-align: justify;
+        margin-top: 3rem;
+    }
+
+    &__recipe-image-container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.special {
+    margin: 0 3rem;
+
+    &__heading-container {
+        text-align: center;
+        padding: 5rem 0;
+    }
+
+    &__content {
+        display: grid;
+        margin: 2rem 8rem;
+        grid-template-columns: 0.5fr 2fr 2fr;
+        gap: 1rem;
+    }
+
+    &__content-heading,
+    &__image-container {
+        height: 50rem;
+    }
+
+    &__text-container {
+        font-weight: 100;
+    }
+
+    &__image {
+        height: 100%;
+        width: 100%;
+    }
+
+    &__dish-2 {
+        padding: 20rem 0;
+    }
+}
+
+/* style="margin-top: 1.5rem; width: 350px" */
+
+//food menu starts here
+/* .food-menu {
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 90vh;
+    overflow: hidden;
+
+    &__heading {
+        text-align: center;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+
+    &__item {
+        display: flex;
+        height: 100rem;
+        // width : 10rem;
+        &__1 {
+            height: 30rem;
+            width: 30rem;
+            border-radius: 50%;
+        }
+        &__2 {
+            flex-direction: column;
+        }
+    }
+
+    &__image {
+        height: 10rem;
+        width: 10rem;
+    }
+} */
+//food menu ends here
+
+//testimonials starts
+
+.test {
+    height: 100vh;
+    background-image: url("../images/header-image.jpg");
+    background-size: cover;
+    &__review {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+}
+
+//testimonials end

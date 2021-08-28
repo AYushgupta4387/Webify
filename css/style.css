@@ -1,0 +1,346 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+@media only screen and (max-width: 75em) {
+    html {
+        font-size: 56.25%;
+    }
+}
+@media only screen and (max-width: 56.25em) {
+    html {
+        font-size: 50%;
+    }
+}
+@media only screen and (min-width: 112.5em) {
+    html {
+        font-size: 75%;
+    }
+}
+
+body {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 2rem;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    background-color: rosybrown;
+}
+
+.heading-primary {
+    font-weight: 700;
+    font-size: 7rem;
+}
+.heading-primary--about {
+    font-size: 5rem;
+}
+@media only screen and (max-width: 37.5em) {
+    .heading-primary {
+        font-size: 5rem;
+    }
+}
+
+.heading-secondary {
+    font-size: 3.5rem;
+}
+.heading-secondary--about {
+    margin-bottom: 2rem;
+}
+.heading-secondary--special-price {
+    margin-bottom: 3rem;
+}
+
+.paragraph--red {
+    color: #f74748;
+}
+
+.paragraph--special {
+    margin: 3rem 0;
+    width: 40rem;
+}
+
+.paragraph--footer-1 {
+    width: 30rem;
+    margin-top: 3rem;
+}
+
+.btn {
+    text-decoration: none;
+    color: #fff;
+}
+.btn--red {
+    background-color: #f74748;
+    border-radius: 3rem;
+    padding: 1rem 2rem;
+}
+.btn--red-shadow {
+    box-shadow: 0.5rem 0.5rem 5rem #f74748;
+}
+.btn--play-video {
+    color: #000;
+}
+
+.navigation__nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 4rem 0;
+}
+
+.navigation__image {
+    height: 40px;
+    width: 100px;
+    background-color: rebeccapurple;
+}
+
+.navigation__link {
+    text-decoration: none;
+    padding: 1rem 1rem;
+}
+.navigation__link:link,
+.navigation__link:visited {
+    color: #000;
+}
+.navigation__link:hover {
+    color: #f74748;
+}
+.navigation__link--dropdown {
+    display: block;
+}
+
+.navigation__dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.navigation__dropdown-content {
+    width: 25ch;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.navigation__dropdown:hover .navigation__dropdown-content {
+    display: block;
+}
+
+.header {
+    height: 90vh;
+    margin-top: 5rem;
+}
+.header__main-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.header__text-container {
+    width: 50%;
+}
+.header__buttons-container {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+}
+.header__play-button {
+    margin-left: 1rem;
+    cursor: pointer;
+    padding: 1rem 2rem;
+}
+.header__icons-main-container {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 5rem;
+}
+.header__icon-container {
+    width: 30%;
+}
+.header__icon-container:not(:last-child) {
+    border-right: 1px solid black;
+}
+.header__icon {
+    font-size: 4rem;
+}
+.header__icon--small {
+    font-size: 2.5rem;
+}
+.header__image {
+    max-height: 70vh;
+    width: auto;
+}
+
+.footer {
+    padding: 5rem;
+}
+.footer__main-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 4rem;
+}
+.footer__container {
+    width: 30%;
+}
+.footer__day-container {
+    margin-top: 3rem;
+}
+.footer__day {
+    display: flex;
+    justify-content: space-between;
+}
+.footer__copyright {
+    text-align: center;
+}
+.footer__social-media-icons {
+    margin-top: 3rem;
+}
+.footer__icon {
+    padding: 0 1rem;
+}
+
+.main-website-container {
+    width: 90vw;
+    background-color: #fff;
+}
+
+.about {
+    padding: 4rem 0;
+}
+.about__main-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+.about__image {
+    max-height: 90vh;
+    width: auto;
+}
+.about__image--recipe {
+    width: 15rem;
+    height: 15rem;
+}
+.about__right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40vw;
+}
+.about__description {
+    text-align: justify;
+    margin-top: 3rem;
+}
+.about__recipe-image-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.special {
+    margin: 0 3rem;
+}
+.special__heading-container {
+    text-align: center;
+    padding: 5rem 0;
+}
+.special__content {
+    display: grid;
+    margin: 2rem 8rem;
+    grid-template-columns: 0.5fr 2fr 2fr;
+    gap: 1rem;
+}
+.special__content-heading,
+.special__image-container {
+    height: 50rem;
+}
+.special__text-container {
+    font-weight: 100;
+}
+.special__image {
+    height: 100%;
+    width: 100%;
+}
+.special__dish-2 {
+    padding: 20rem 0;
+}
+
+/* style="margin-top: 1.5rem; width: 350px" */
+/* .food-menu {
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 90vh;
+    overflow: hidden;
+
+    &__heading {
+        text-align: center;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+
+    &__item {
+        display: flex;
+        height: 100rem;
+        // width : 10rem;
+        &__1 {
+            height: 30rem;
+            width: 30rem;
+            border-radius: 50%;
+        }
+        &__2 {
+            flex-direction: column;
+        }
+    }
+
+    &__image {
+        height: 10rem;
+        width: 10rem;
+    }
+} */
+.test {
+    height: 100vh;
+    background-image: url("../images/header-image.jpg");
+    background-size: cover;
+}
+.test__review {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}

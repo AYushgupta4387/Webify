@@ -1,0 +1,14 @@
+{
+  "name": "vihaan-webify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass" : "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Ayush Gupta and Dip Turkar",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
